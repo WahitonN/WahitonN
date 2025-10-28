@@ -246,7 +246,6 @@
             }
         }
 
-        /* Стили для скроллбара */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -283,8 +282,8 @@
             <p>Специализируюсь на реверс-инжиниринге и безопасности ПО. Создаю читы для игр, разрабатываю системы защиты кода и анализирую существующие решения.</p>
             <div class="code-block">
                 <span style="color: #00ff88;">$</span> expertise --areas "читы, обфускация, реверс-инжиниринг"<br>
-                <span style="color: #00ff88;">></span> Статус: Активен ✅<br>
-                <span style="color: #00ff88;">></span> Опыт: 3+ года
+                <span style="color: #00ff88;">></span> Статус: Активен<br>
+                <span style="color: #00ff88;">></span> Опыт: 2+ года
             </div>
         </section>
 
@@ -292,14 +291,14 @@
             <div class="service">
                 <div class="service-title">
                     <span>Разработка Читов</span>
-                    <div class="price">от 100$</div>
+                    <div class="price">от 1000₽</div>
                 </div>
                 <p>Качественные решения для различных игровых платформ</p>
                 <ul class="features">
-                    <li>AIM-боты и аим-ассистенты</li>
-                    <li>ESP / Wallhack системы</li>
+                    <li>KillAura/AimBot/Exploit</li>
+                    <li>ESP/WallHack</li>
                     <li>Манипуляции с игровой памятью</li>
-                    <li>Обход анти-чит систем</li>
+                    <li>Обход разных анти-читов</li>
                     <li>Кастомные функции под заказ</li>
                 </ul>
             </div>
@@ -307,11 +306,11 @@
             <div class="service">
                 <div class="service-title">
                     <span>Защита Кода</span>
-                    <div class="price">от 150$</div>
+                    <div class="price">от 1700₽</div>
                 </div>
                 <p>Профессиональная обфускация и защита вашего ПО</p>
                 <ul class="features">
-                    <li>Обфускация исходного кода</li>
+                    <li>Обфускация кода</li>
                     <li>Защита от отладки и анализа</li>
                     <li>Анти-дампинг методы</li>
                     <li>Шифрование строк и ресурсов</li>
@@ -323,7 +322,7 @@
             <div class="service">
                 <div class="service-title">
                     <span>Анализ & Снятие Защит</span>
-                    <div class="price">от 200$</div>
+                    <div class="price">от 2000₽</div>
                 </div>
                 <p>Профессиональный анализ систем защиты</p>
                 <ul class="features">
@@ -359,14 +358,11 @@
     </div>
 
     <script>
-        // Простой скрипт для анимации появления
         document.addEventListener('DOMContentLoaded', function() {
             const elements = document.querySelectorAll('.service, .bio, .contact');
-            
             elements.forEach((el, index) => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(20px)';
-                
                 setTimeout(() => {
                     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                     el.style.opacity = '1';
