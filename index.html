@@ -1,14 +1,235 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Моё типо</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTPAX_UKRAINE - Читы и защита кода</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #333; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .tagline {
+            font-size: 1.4em;
+            color: #4ecdc4;
+            margin-bottom: 20px;
+        }
+
+        .bio {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #e0e0e0;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card h3 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .price {
+            font-size: 1.8em;
+            color: #4ecdc4;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .telegram-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #0088cc, #00a8ff);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 136, 204, 0.4);
+        }
+
+        .telegram-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 136, 204, 0.6);
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-list li:before {
+            content: "✓ ";
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .services {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Привет, мир!</h1>
-    <p>Тут скоро что-то будет!</p>
+    <div class="container">
+        <header>
+            <h1>CTPAX_UKRAINE</h1>
+            <div class="tagline">Эксперт в области разработки читов и защиты ПО</div>
+        </header>
+
+        <section class="bio">
+            <p>Профессиональный разработчик с многолетним опытом в области реверс-инжиниринга, создания защитных решений и анализа программного обеспечения. Специализируюсь на комплексном подходе к безопасности кода.</p>
+        </section>
+
+        <section class="services">
+            <div class="service-card">
+                <h3>Разработка Читов</h3>
+                <p>Создание высококачественных читов для различных игровых платформ с гарантией стабильности и безопасности.</p>
+                <ul class="feature-list">
+                    <li>AIM-боты и аим-ассистенты</li>
+                    <li>Wallhack и ESP</li>
+                    <li>Манипуляции с памятью</li>
+                    <li>Обход анти-читов</li>
+                    <li>Кастомные функции по запросу</li>
+                </ul>
+                <div class="price">от 100$</div>
+            </div>
+
+            <div class="service-card">
+                <h3>Защита Кода (Обфускация)</h3>
+                <p>Профессиональная защита вашего программного обеспечения от реверс-инжиниринга и взлома.</p>
+                <ul class="feature-list">
+                    <li>Обфускация исходного кода</li>
+                    <li>Защита от отладки</li>
+                    <li>Анти-дампинг</li>
+                    <li>Шифрование строк и ресурсов</li>
+                    <li>Виртуализация кода</li>
+                    <li>Защита от патчинга</li>
+                </ul>
+                <div class="price">от 150$</div>
+            </div>
+
+            <div class="service-card">
+                <h3>Анализ и Снятие Защит</h3>
+                <p>Профессиональный анализ существующих систем защиты и разработка методов их обхода.</p>
+                <ul class="feature-list">
+                    <li>Анализ алгоритмов защиты</li>
+                    <li>Реверс-инжиниринг</li>
+                    <li>Снятие обфускации</li>
+                    <li>Декомпиляция и анализ</li>
+                    <li>Поиск уязвимостей</li>
+                    <li>Консультации по безопасности</li>
+                </ul>
+                <div class="price">от 200$</div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Свяжитесь со мной</h2>
+            <p>Для обсуждения проекта или получения консультации</p>
+            <a href="https://t.me/CTPAX_UKRAINE" class="telegram-btn" target="_blank">
+                Написать в Telegram: @CTPAX_UKRAINE
+            </a>
+            <p style="margin-top: 20px; color: #aaa;">
+                Отвечаю в течение 1-2 часов
+            </p>
+        </section>
+    </div>
+
+    <script>
+        // Простой скрипт для плавной анимации появления элементов
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.service-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 200 * index);
+            });
+        });
+    </script>
 </body>
 </html>
