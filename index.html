@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTPAX_UKRAINE - Читы и защита кода</title>
+    <title>CTPAX_UKRAINE - Читы & Защита</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,221 +13,365 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #fff;
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
             line-height: 1.6;
-            min-height: 100vh;
+            overflow-x: hidden;
         }
+
+        .terminal-bar {
+            background: #1a1a1a;
+            padding: 8px 20px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background: #ff5f57; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #28ca42; }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
-        header {
+        .header {
             text-align: center;
-            padding: 60px 0;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 15px;
-            margin-bottom: 40px;
-            backdrop-filter: blur(10px);
+            margin-bottom: 60px;
+            border-left: 3px solid #00ff88;
+            padding-left: 20px;
+            text-align: left;
         }
 
-        h1 {
-            font-size: 3.5em;
+        .username {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.8em;
+            font-weight: 700;
+            color: #00ff88;
             margin-bottom: 10px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
         }
 
         .tagline {
-            font-size: 1.4em;
-            color: #4ecdc4;
-            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #888;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         .bio {
-            max-width: 800px;
-            margin: 0 auto 40px;
-            text-align: center;
-            font-size: 1.2em;
-            color: #e0e0e0;
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 40px;
+            position: relative;
         }
 
-        .services {
+        .bio:before {
+            content: "> whoami";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #0a0a0a;
+            padding: 0 10px;
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+        }
+
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 25px;
             margin-bottom: 50px;
         }
 
-        .service-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .service {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 25px;
+            position: relative;
+            transition: all 0.3s ease;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        .service:hover {
+            border-color: #333;
+            transform: translateY(-2px);
         }
 
-        .service-card h3 {
-            color: #ff6b6b;
+        .service-title {
+            font-family: 'JetBrains Mono', monospace;
+            color: #00ff88;
+            font-size: 1.3em;
             margin-bottom: 15px;
-            font-size: 1.5em;
+            display: flex;
+            justify-content: between;
+            align-items: center;
         }
 
         .price {
-            font-size: 1.8em;
-            color: #4ecdc4;
-            font-weight: bold;
-            margin: 15px 0;
+            background: #00ff88;
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-left: auto;
         }
 
-        .contact {
-            text-align: center;
-            padding: 40px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 15px;
-            margin-top: 40px;
-        }
-
-        .telegram-btn {
-            display: inline-block;
-            background: linear-gradient(45deg, #0088cc, #00a8ff);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.3em;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 136, 204, 0.4);
-        }
-
-        .telegram-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 136, 204, 0.6);
-        }
-
-        .feature-list {
+        .features {
             list-style: none;
             margin-top: 15px;
         }
 
-        .feature-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        .features li {
+            padding: 6px 0;
+            border-bottom: 1px solid #1a1a1a;
+            position: relative;
+            padding-left: 20px;
         }
 
-        .feature-list li:before {
-            content: "✓ ";
-            color: #4ecdc4;
-            font-weight: bold;
+        .features li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .contact {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .contact:before {
+            content: "> contact";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #0a0a0a;
+            padding: 0 10px;
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+        }
+
+        .tg-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #0088cc;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #0088cc;
+        }
+
+        .tg-button:hover {
+            background: transparent;
+            color: #0088cc;
+            transform: translateY(-1px);
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #1a1a1a;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #00ff88;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .code-block {
+            background: #1a1a1a;
+            border-left: 3px solid #00ff88;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
+            color: #ccc;
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5em;
-            }
-            
-            .services {
-                grid-template-columns: 1fr;
-            }
-            
             .container {
-                padding: 10px;
+                padding: 20px 15px;
             }
+            
+            .username {
+                font-size: 2em;
+            }
+            
+            .service-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .price {
+                margin-left: 0;
+            }
+        }
+
+        /* Стили для скроллбара */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444;
         }
     </style>
 </head>
 <body>
+    <div class="terminal-bar">
+        <div class="terminal-dot dot-red"></div>
+        <div class="terminal-dot dot-yellow"></div>
+        <div class="terminal-dot dot-green"></div>
+        <div style="color: #888; font-size: 0.9em;">bash — CTPAX_UKRAINE</div>
+    </div>
+
     <div class="container">
-        <header>
-            <h1>CTPAX_UKRAINE</h1>
-            <div class="tagline">Эксперт в области разработки читов и защиты ПО</div>
+        <header class="header">
+            <div class="username">@CTPAX_UKRAINE</div>
+            <div class="tagline">// разработка читов & защита кода</div>
         </header>
 
         <section class="bio">
-            <p>Профессиональный разработчик с многолетним опытом в области реверс-инжиниринга, создания защитных решений и анализа программного обеспечения. Специализируюсь на комплексном подходе к безопасности кода.</p>
+            <p>Специализируюсь на реверс-инжиниринге и безопасности ПО. Создаю читы для игр, разрабатываю системы защиты кода и анализирую существующие решения.</p>
+            <div class="code-block">
+                <span style="color: #00ff88;">$</span> expertise --areas "читы, обфускация, реверс-инжиниринг"<br>
+                <span style="color: #00ff88;">></span> Статус: Активен ✅<br>
+                <span style="color: #00ff88;">></span> Опыт: 3+ года
+            </div>
         </section>
 
-        <section class="services">
-            <div class="service-card">
-                <h3>Разработка Читов</h3>
-                <p>Создание высококачественных читов для различных игровых платформ с гарантией стабильности и безопасности.</p>
-                <ul class="feature-list">
+        <section class="services-grid">
+            <div class="service">
+                <div class="service-title">
+                    <span>Разработка Читов</span>
+                    <div class="price">от 100$</div>
+                </div>
+                <p>Качественные решения для различных игровых платформ</p>
+                <ul class="features">
                     <li>AIM-боты и аим-ассистенты</li>
-                    <li>Wallhack и ESP</li>
-                    <li>Манипуляции с памятью</li>
-                    <li>Обход анти-читов</li>
-                    <li>Кастомные функции по запросу</li>
+                    <li>ESP / Wallhack системы</li>
+                    <li>Манипуляции с игровой памятью</li>
+                    <li>Обход анти-чит систем</li>
+                    <li>Кастомные функции под заказ</li>
                 </ul>
-                <div class="price">от 100$</div>
             </div>
 
-            <div class="service-card">
-                <h3>Защита Кода (Обфускация)</h3>
-                <p>Профессиональная защита вашего программного обеспечения от реверс-инжиниринга и взлома.</p>
-                <ul class="feature-list">
+            <div class="service">
+                <div class="service-title">
+                    <span>Защита Кода</span>
+                    <div class="price">от 150$</div>
+                </div>
+                <p>Профессиональная обфускация и защита вашего ПО</p>
+                <ul class="features">
                     <li>Обфускация исходного кода</li>
-                    <li>Защита от отладки</li>
-                    <li>Анти-дампинг</li>
+                    <li>Защита от отладки и анализа</li>
+                    <li>Анти-дампинг методы</li>
                     <li>Шифрование строк и ресурсов</li>
-                    <li>Виртуализация кода</li>
-                    <li>Защита от патчинга</li>
+                    <li>Виртуализация критических участков</li>
+                    <li>Защита от модификации</li>
                 </ul>
-                <div class="price">от 150$</div>
             </div>
 
-            <div class="service-card">
-                <h3>Анализ и Снятие Защит</h3>
-                <p>Профессиональный анализ существующих систем защиты и разработка методов их обхода.</p>
-                <ul class="feature-list">
-                    <li>Анализ алгоритмов защиты</li>
-                    <li>Реверс-инжиниринг</li>
-                    <li>Снятие обфускации</li>
-                    <li>Декомпиляция и анализ</li>
-                    <li>Поиск уязвимостей</li>
+            <div class="service">
+                <div class="service-title">
+                    <span>Анализ & Снятие Защит</span>
+                    <div class="price">от 200$</div>
+                </div>
+                <p>Профессиональный анализ систем защиты</p>
+                <ul class="features">
+                    <li>Реверс-инжиниринг защищенных приложений</li>
+                    <li>Анализ алгоритмов обфускации</li>
+                    <li>Снятие существующих защит</li>
+                    <li>Декомпиляция и анализ кода</li>
+                    <li>Поиск уязвимостей в защите</li>
                     <li>Консультации по безопасности</li>
                 </ul>
-                <div class="price">от 200$</div>
             </div>
         </section>
 
         <section class="contact">
-            <h2>Свяжитесь со мной</h2>
-            <p>Для обсуждения проекта или получения консультации</p>
-            <a href="https://t.me/CTPAX_UKRAINE" class="telegram-btn" target="_blank">
-                Написать в Telegram: @CTPAX_UKRAINE
+            <h3 style="margin-bottom: 15px;">Для сотрудничества</h3>
+            <p style="color: #888; margin-bottom: 10px;">Обсудим ваш проект и найдем оптимальное решение</p>
+            
+            <a href="https://t.me/CTPAX_UKRAINE" class="tg-button" target="_blank">
+                📩 Написать в Telegram
             </a>
-            <p style="margin-top: 20px; color: #aaa;">
-                Отвечаю в течение 1-2 часов
-            </p>
+            
+            <div class="status">
+                <div class="status-dot"></div>
+                <span>Online — отвечаю в течение часа</span>
+            </div>
+
+            <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #222;">
+                <div style="color: #888; font-size: 0.9em; font-family: 'JetBrains Mono', monospace;">
+                    <span style="color: #00ff88;">$</span> contact --telegram "@CTPAX_UKRAINE"
+                </div>
+            </div>
         </section>
     </div>
 
     <script>
+        // Простой скрипт для анимации появления
         document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.service-card');
-            cards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
+            const elements = document.querySelectorAll('.service, .bio, .contact');
+            
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
                 
                 setTimeout(() => {
-                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, 200 * index);
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 100 * index);
             });
         });
     </script>
